@@ -1,12 +1,54 @@
 /* SyncIT MSP — homepage interactions */
 document.addEventListener('DOMContentLoaded', () => {
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* Failsafe: never let reveal elements stay hidden (e.g. stale/broken JS). */
   const forceReveal = () => {
-    document.querySelectorAll('.reveal, .reveal-scale').forEach(el => el.classList.add('in'));
+    document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right').forEach(el => el.classList.add('in'));
     document.querySelectorAll('.home .step').forEach(el => el.classList.add('in'));
   };
   window.addEventListener('load', () => setTimeout(forceReveal, 2600));
+
+  /* Directional scroll reveals — elements slide in from the sides */
+  const dirEls = document.querySelectorAll('.reveal-left, .reveal-right');
+  if (dirEls.length) {
+    if ('IntersectionObserver' in window) {
+      const dirIo = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); dirIo.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      dirEls.forEach(el => dirIo.observe(el));
+    } else {
+      dirEls.forEach(el => el.classList.add('in'));
+    }
+  }
+
+  /* Generic parallax — graphics drift gently as you scroll */
+  const parallaxEls = document.querySelectorAll('[data-parallax]');
+  if (parallaxEls.length && !reducedMotion) {
+    let pTicking = false;
+    const runParallax = () => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      parallaxEls.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        const center = r.top + r.height / 2;
+        const delta = (center - vh / 2) / vh;
+        const speed = parseFloat(el.dataset.parallax) || 0.06;
+        el.style.transform = `translate3d(0, ${(-delta * speed * 120).toFixed(1)}px, 0)`;
+      });
+      pTicking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (pTicking) return;
+      pTicking = true;
+      requestAnimationFrame(runParallax);
+    }, { passive: true });
+    window.addEventListener('resize', runParallax, { passive: true });
+    runParallax();
+  }
 
   /* Cursor spotlight on cards */
   if (!window.matchMedia('(hover: none)').matches &&
