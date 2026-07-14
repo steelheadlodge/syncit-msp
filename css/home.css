@@ -54,11 +54,11 @@ body.home .navbar.scrolled {
 body.home .nav-logo { gap: 15px; }
 body.home .nav-logo .brand {
   color: var(--home-charcoal);
-  font-weight: 500; font-size: 31px; letter-spacing: -0.015em;
+  font-weight: 700; font-size: 31px; letter-spacing: -0.015em;
   display: inline-flex; align-items: baseline; line-height: 1;
 }
 body.home .nav-logo .brand span {
-  font-size: 1.16em; font-weight: 900; letter-spacing: 0.5px; margin-left: 4px;
+  font-size: 1.12em; font-weight: 900; letter-spacing: -0.01em; margin-left: 0;
   background: linear-gradient(120deg, var(--home-accent-2), var(--home-teal));
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -69,7 +69,7 @@ body.home .nav-logo .tagline { color: var(--home-muted); font-size: 11px; letter
   body.home .nav-logo .brand { font-size: 27px; }
   body.home .nav-logo { gap: 12px; }
 }
-body.home .footer-brand .brand span { margin-left: 3px; font-weight: 800; letter-spacing: 0.5px; }
+body.home .footer-brand .brand span { margin-left: 0; font-weight: 800; }
 body.home .nav-links a { color: var(--home-ink); font-weight: 500; }
 body.home .nav-links a:hover { background: rgba(11,127,232,.06); color: var(--home-accent); }
 body.home .nav-links .btn-nav-cta {
@@ -1620,6 +1620,56 @@ body.home .service-grid > *:nth-child(3n+2) .service-card::after,
 body.home .service-grid > *:nth-child(3n+2).service-card::after { background: linear-gradient(90deg, #6366F1, #3B82F6); }
 body.home .service-grid > *:nth-child(3n) .service-card::after,
 body.home .service-grid > *:nth-child(3n).service-card::after { background: linear-gradient(90deg, #0EA5A5, #22D3EE); }
+
+/* ══ Readability pass — larger, comfortable type everywhere ══ */
+body.home { font-size: 18px; }
+body.home .topbar { font-size: 14px; }
+body.home .nav-links a { font-size: 16px; }
+body.home .nav-links .btn-nav-cta { font-size: 15.5px; }
+
+body.home .hero-eyebrow { font-size: 14px; }
+body.home .hero .lead { font-size: clamp(19px, 1.7vw, 22px); line-height: 1.6; }
+
+body.home .eyebrow { font-size: 14px; letter-spacing: 1.5px; }
+body.home .section-subtitle { font-size: 21px; line-height: 1.6; max-width: 760px; }
+
+body.home .service-card h3 { font-size: 21px; }
+body.home .service-card p { font-size: 17px; line-height: 1.65; }
+body.home .service-card .learn-more { font-size: 15.5px; }
+
+body.home .why-card h3 { font-size: 20px; }
+body.home .why-card p { font-size: 16.5px; line-height: 1.65; }
+
+body.home .trust-item strong { font-size: 15.5px; }
+body.home .trust-item { font-size: 14px; }
+body.home .hero-stat-label { font-size: 14px; }
+
+body.home .check-list li { font-size: 17px; }
+
+body.home .quote-card p { font-size: 18px; line-height: 1.7; }
+body.home .quote-card .who .nm { font-size: 16px; }
+body.home .quote-card .who .rl { font-size: 14px; }
+
+body.home .discovery-card h3 { font-size: 24px; }
+body.home .discovery-card p { font-size: 16px; }
+body.home .dc-field input { font-size: 16px; }
+body.home .dc-trust span { font-size: 13px; }
+
+body.home .sync-panel-row .label { font-size: 15.5px; }
+body.home .sync-panel-title { font-size: 15px; }
+
+body.home .logostrip .label { font-size: 12.5px; }
+body.home .marquee span { font-size: 16px; }
+
+body.home .flow-node h4 { font-size: 17px; }
+body.home .flow-node p { font-size: 14px; }
+
+body.home .image-band p { font-size: clamp(17px, 1.6vw, 20px); }
+
+body.home .footer-brand p { font-size: 15.5px; }
+body.home .footer-grid ul li,
+body.home .footer-grid ul a { font-size: 15px; }
+body.home .footer-grid h4 { font-size: 15.5px; }
 
 @media (prefers-reduced-motion: reduce) {
   body.home .service-icon::before,
