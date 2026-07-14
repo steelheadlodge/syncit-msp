@@ -51,20 +51,25 @@ body.home .navbar.scrolled {
   background: rgba(10,15,26,.94);
   box-shadow: 0 1px 0 var(--home-border), 0 10px 34px rgba(0,0,0,.4);
 }
-body.home .nav-logo { gap: 13px; }
+body.home .nav-logo { gap: 15px; }
 body.home .nav-logo .brand {
   color: var(--home-charcoal);
-  font-weight: 500; font-size: 25px; letter-spacing: -0.015em;
-  display: inline-flex; align-items: baseline;
+  font-weight: 500; font-size: 31px; letter-spacing: -0.015em;
+  display: inline-flex; align-items: baseline; line-height: 1;
 }
 body.home .nav-logo .brand span {
-  font-size: 1.18em; font-weight: 900; letter-spacing: 1.2px; margin-left: 3px;
+  font-size: 1.16em; font-weight: 900; letter-spacing: 0.5px; margin-left: 4px;
   background: linear-gradient(120deg, var(--home-accent-2), var(--home-teal));
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 18px rgba(59,130,246,.35);
 }
-body.home .nav-logo .tagline { color: var(--home-muted); font-size: 10.5px; letter-spacing: 1.6px; margin-top: 1px; }
+body.home .nav-logo .tagline { color: var(--home-muted); font-size: 11px; letter-spacing: 1.6px; margin-top: 3px; }
+@media (max-width: 640px) {
+  body.home .logo-mark { width: 52px; height: 52px; }
+  body.home .nav-logo .brand { font-size: 27px; }
+  body.home .nav-logo { gap: 12px; }
+}
+body.home .footer-brand .brand span { margin-left: 3px; font-weight: 800; letter-spacing: 0.5px; }
 body.home .nav-links a { color: var(--home-ink); font-weight: 500; }
 body.home .nav-links a:hover { background: rgba(11,127,232,.06); color: var(--home-accent); }
 body.home .nav-links .btn-nav-cta {
@@ -83,9 +88,9 @@ body.home .nav-links .btn-nav-cta:hover {
 
 /* ── Logo sync animation ("living sync core") ─────────────── */
 body.home .logo-mark {
-  width: 54px; height: 54px;
+  width: 62px; height: 62px;
   overflow: visible;
-  filter: drop-shadow(0 4px 14px rgba(59,130,246,.4));
+  filter: drop-shadow(0 4px 16px rgba(59,130,246,.45));
 }
 body.home .logo-mark g,
 body.home .logo-mark .lm-breathe,
@@ -159,6 +164,36 @@ body.home .btn-outline:hover {
 body.home .btn-lg { padding: 17px 36px; font-size: 16px; }
 
 /* ── Hero ─────────────────────────────────────────────────── */
+/* ── Wider layout + larger, more readable type ───────────── */
+body.home { font-size: 17px; }
+body.home .container { max-width: 1440px; padding-left: 44px; padding-right: 44px; }
+body.home .hero-wrap { max-width: 1440px; padding-left: 44px; padding-right: 44px; }
+body.home .footer-grid,
+body.home .footer-bottom { max-width: 1440px; }
+body.home .section-subtitle { font-size: 19px; line-height: 1.6; max-width: 740px; }
+body.home .service-card p,
+body.home .why-card p { font-size: 15.5px; line-height: 1.66; }
+body.home .service-card h3 { font-size: 19.5px; }
+body.home .why-card h3 { font-size: 18.5px; }
+@media (max-width: 900px) {
+  body.home .container,
+  body.home .hero-wrap { padding-left: 22px; padding-right: 22px; }
+}
+
+/* ── Hero background photograph (managed-IT signal) ──────── */
+body.home .hero-bgimg {
+  position: absolute; inset: 0; z-index: 0;
+  background: url('../images/hero-bg.jpg') center center / cover no-repeat;
+  opacity: .72;
+}
+body.home .hero-bgimg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(9,13,22,.96) 0%, rgba(9,13,22,.8) 38%, rgba(9,13,22,.42) 100%),
+    linear-gradient(180deg, rgba(9,13,22,.28) 0%, rgba(9,13,22,.88) 100%);
+}
+
 body.home .hero {
   background: var(--home-bg);
   color: var(--home-charcoal);
@@ -229,12 +264,13 @@ body.home .hero-grid {
 body.home .hero-inner { max-width: none; margin: 0; }
 body.home .hero-eyebrow {
   color: var(--home-accent-2);
-  background: rgba(59,130,246,.12);
-  border: 1px solid rgba(59,130,246,.26);
-  font-size: 11.5px;
-  letter-spacing: 1.6px;
-  padding: 7px 16px;
-  margin-bottom: 28px;
+  background: rgba(59,130,246,.14);
+  border: 1px solid rgba(59,130,246,.3);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  padding: 8px 18px;
+  margin-bottom: 26px;
 }
 body.home .hero-eyebrow .pulse {
   background: var(--home-teal);
@@ -260,10 +296,10 @@ body.home .hero h1 .grad-text {
   -webkit-text-fill-color: transparent;
 }
 body.home .hero .lead {
-  color: var(--home-muted);
-  font-size: clamp(17px, 2vw, 19px);
-  line-height: 1.7;
-  max-width: 520px;
+  color: var(--home-ink);
+  font-size: clamp(18px, 1.7vw, 21px);
+  line-height: 1.6;
+  max-width: 540px;
   margin-bottom: 36px;
 }
 body.home .hero-ctas { margin-bottom: 0; gap: 16px; }
@@ -505,6 +541,30 @@ body.home .section-ink {
   background: #070B14;
   color: #fff;
 }
+
+/* ── Light section — breaks up the dark for rhythm ───────── */
+body.home .section-light {
+  position: relative;
+  background: linear-gradient(180deg, #EEF3FB 0%, #DCE7F4 100%);
+  color: #1B2740;
+  border-top: 1px solid rgba(20,40,70,.10);
+  border-bottom: 1px solid rgba(20,40,70,.10);
+}
+body.home .section-light .eyebrow {
+  color: var(--home-accent);
+  background: rgba(59,130,246,.10);
+  border: 1px solid rgba(59,130,246,.22);
+}
+body.home .section-light .section-title { color: #0E1A2E; }
+body.home .section-light .section-subtitle { color: #47576F; }
+body.home .section-light .why-card {
+  background: #fff;
+  border: 1px solid #DCE5F1;
+  box-shadow: 0 12px 34px rgba(20,40,70,.09);
+}
+body.home .section-light .why-card h3 { color: #0E1A2E; }
+body.home .section-light .why-card p { color: #4E5E77; }
+body.home .section-light .why-card::before { background: radial-gradient(240px circle at var(--mx) var(--my), rgba(59,130,246,.10), transparent 60%); }
 
 /* ── Directional scroll reveals (movement as you scroll) ──── */
 body.home .reveal-left,
@@ -1176,13 +1236,13 @@ body.home .hero-offer {
 }
 body.home .hero-offer-photo {
   position: relative;
-  height: 152px;
+  height: 220px;
   overflow: hidden;
 }
 body.home .hero-offer-photo img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 40%;
   display: block;
 }
 body.home .hero-offer-photo::after {
@@ -1229,14 +1289,14 @@ body.home .discovery-card .dc-dot {
   animation: livePulse 2s ease infinite;
 }
 body.home .discovery-card h3 {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 700;
   color: var(--home-charcoal);
   letter-spacing: -0.02em;
   line-height: 1.15;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
-body.home .discovery-card p { font-size: 13.5px; color: var(--home-muted); line-height: 1.55; margin-bottom: 16px; }
+body.home .discovery-card p { font-size: 14.5px; color: var(--home-ink); line-height: 1.55; margin-bottom: 16px; }
 body.home .dc-field { margin-bottom: 10px; }
 body.home .dc-field input {
   width: 100%;
