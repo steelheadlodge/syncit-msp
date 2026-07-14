@@ -16,24 +16,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=14">
+  <link rel="stylesheet" href="css/home.css?v=14">
   <script>document.documentElement.className += ' js';</script>
   <style>
     .contact-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:start; }
     @media (max-width:820px){ .contact-grid{ grid-template-columns:1fr; } }
   </style>
 </head>
-<body>
-
-<div class="topbar">
-  <div class="container">
-    <span><strong>Serving Nassau County, Long Island, NYC &amp; Boca Raton, FL</strong></span>
-    <span class="dot">•</span>
-    <span>Mon–Fri 8a–8p · 24/7 Monitoring</span>
-    <span class="dot">•</span>
-    <a href="tel:+15167749700">(516) 774-9700</a>
-  </div>
-</div>
+<body class="home">
 
 <nav class="navbar">
   <div class="nav-inner">
@@ -76,7 +67,7 @@
 
       <!-- Left: form -->
       <div>
-        <h2 style="font-size:24px; font-weight:700; color:var(--ink); margin-bottom:6px;">Request an Assessment or Support</h2>
+        <h2 style="font-size:26px; font-weight:700; color:var(--home-charcoal); margin-bottom:6px;">Request an Assessment or Support</h2>
         <p style="color:var(--mgray); font-size:15px; margin-bottom:26px;">Fill out the form and a real engineer will get back to you within one business day.</p>
 
         <form class="form-card" action="https://formspree.io/f/your-form-id" method="POST" id="contact-form">
@@ -151,7 +142,7 @@
 
       <!-- Right: info -->
       <div>
-        <h2 style="font-size:24px; font-weight:700; color:var(--ink); margin-bottom:24px;">Contact Information</h2>
+        <h2 style="font-size:26px; font-weight:700; color:var(--home-charcoal); margin-bottom:24px;">Contact Information</h2>
 
         <div class="info-block">
           <h4>Phone</h4>
@@ -170,12 +161,12 @@
         </div>
         <div class="info-block">
           <h4>Service Area</h4>
-          <div style="font-size:16px; color:var(--text); font-weight:600; margin-bottom:4px;">New York &amp; Boca Raton, FL</div>
+          <div style="font-size:16px; color:var(--home-charcoal); font-weight:600; margin-bottom:4px;">New York &amp; Boca Raton, FL</div>
           <div class="sub">Nassau County HQ · <a href="service-area.html">see full coverage →</a></div>
         </div>
 
         <div style="background:var(--grad-soft); border:1px solid var(--border); border-radius:14px; padding:24px; margin-top:20px;">
-          <h4 style="font-size:13px; font-weight:700; color:var(--ink); letter-spacing:.5px; text-transform:uppercase; margin-bottom:10px;">The 90-Day Guarantee</h4>
+          <h4 style="font-size:14px; font-weight:700; color:var(--home-charcoal); letter-spacing:.5px; text-transform:uppercase; margin-bottom:10px;">The 90-Day Guarantee</h4>
           <p style="font-size:14.5px; color:var(--mgray);">Try SyncIT risk-free. If you're not impressed in your first 90 days as a managed client, we'll make it right. That's how confident we are.</p>
         </div>
       </div>
@@ -227,7 +218,7 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=14"></script>
 <script>
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
   e.preventDefault();

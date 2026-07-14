@@ -247,9 +247,9 @@ body.home .hero-mesh {
 body.home .hero-wrap {
   position: relative;
   z-index: 2;
-  max-width: 1240px;
+  max-width: 1780px;
   margin: 0 auto;
-  padding: 72px 24px 0;
+  padding: 72px 4vw 0;
 }
 body.home .hero-grid {
   display: grid;
@@ -290,6 +290,8 @@ body.home .hero h1 .grad-text {
   background: linear-gradient(135deg, var(--home-accent) 0%, var(--home-teal) 100%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 1.16;
+  padding-bottom: 0.14em;
 }
 body.home .hero .lead {
   color: var(--home-ink);
@@ -1625,7 +1627,7 @@ body.home .nav-logo .tagline { font-size: 12.5px; }
 
 body.home .hero-eyebrow { font-size: 15.5px; }
 /* H1 dialed back + each phrase kept on its own single line */
-body.home .hero h1 { font-size: clamp(38px, 4vw, 56px); line-height: 1.06; }
+body.home .hero h1 { font-size: clamp(38px, 4vw, 56px); line-height: 1.12; }
 body.home .hero h1 .hl,
 body.home .hero h1 .grad-text { display: block; white-space: nowrap; }
 body.home .hero .lead { font-size: clamp(20px, 1.6vw, 24px); line-height: 1.55; }
@@ -1674,6 +1676,12 @@ body.home .footer-grid ul li,
 body.home .footer-grid ul a { font-size: 17px; }
 body.home .footer-grid h4 { font-size: 17px; }
 
+body.home .col-text p { font-size: 19.5px; line-height: 1.6; }
+body.home .feature-text p { font-size: 19px; line-height: 1.6; }
+body.home .feature-text li { font-size: 18px; }
+body.home .cta-banner p { font-size: 20px; }
+body.home .page-header p { font-size: 21px; }
+
 @media (max-width: 560px) {
   body.home .hero h1 { white-space: normal; font-size: 34px; }
   body.home .hero h1 .hl,
@@ -1720,3 +1728,76 @@ body.home .footer-grid h4 { font-size: 17px; }
   body.home .flow-link::before { transform: scaleX(1) !important; }
   body.home .flow-packet { opacity: 0 !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   Inner pages (services · about · service-area · contact) — dark premium
+   These pages share style.css light components; re-skin them for the
+   dark theme + push type up for readability.
+═══════════════════════════════════════════════════════════════ */
+body.home .page-header {
+  background: linear-gradient(160deg, #0E1626 0%, var(--home-bg) 72%);
+  border-bottom: 1px solid var(--home-border);
+  padding: 96px 4vw 68px;
+}
+body.home .page-header .container { max-width: 1780px; padding-left: 0; padding-right: 0; }
+body.home .page-header .eyebrow { color: var(--home-teal); }
+body.home .page-header h1 { color: var(--home-charcoal); font-size: clamp(40px, 4.8vw, 62px); }
+body.home .page-header p { color: var(--home-ink); font-size: 21px; line-height: 1.55; max-width: 780px; }
+
+body.home .section-title { color: var(--home-charcoal); }
+body.home .section-subtitle { color: var(--home-muted); font-size: 21px; }
+
+/* Quick-nav pills */
+body.home .pill {
+  background: var(--home-surface); color: var(--home-charcoal);
+  border: 1px solid var(--home-border); font-size: 16px; padding: 11px 20px;
+}
+body.home .pill:hover { border-color: var(--home-accent); color: #fff; transform: translateY(-2px); }
+
+/* Service blocks */
+body.home .svc-block { border-bottom: 1px solid var(--home-border); }
+body.home .svc-media {
+  background: linear-gradient(160deg, var(--home-surface), var(--home-surface-2));
+  border: 1px solid var(--home-border);
+}
+body.home .svc-body h2 { color: var(--home-charcoal); font-size: clamp(26px, 2.8vw, 34px); }
+body.home .svc-body p { color: var(--home-ink); font-size: 18.5px; line-height: 1.7; }
+
+/* Two-column text (about) */
+body.home .col-text h2 { color: var(--home-charcoal); }
+body.home .two-col .col-text p { color: var(--home-ink); font-size: 19px; }
+
+/* Contact form */
+body.home .form-card {
+  background: var(--home-surface); border: 1px solid var(--home-border);
+  box-shadow: var(--home-shadow-lg);
+}
+body.home .form-group label { color: var(--home-ink); font-size: 15px; }
+body.home .form-group input,
+body.home .form-group select,
+body.home .form-group textarea {
+  background: var(--home-surface-2); color: var(--home-charcoal);
+  border: 1px solid var(--home-border); font-size: 16.5px;
+}
+body.home .form-group input::placeholder,
+body.home .form-group textarea::placeholder { color: var(--home-muted); }
+body.home .form-group input:focus,
+body.home .form-group select:focus,
+body.home .form-group textarea:focus { border-color: var(--home-accent); outline: none; }
+body.home .form-group select option { color: #0A0F1A; }
+
+/* Contact info blocks */
+body.home .info-block h4 { color: var(--home-muted); }
+body.home .info-block .value { color: var(--home-charcoal); font-size: 20px; }
+body.home .info-block .value a { color: var(--home-charcoal); }
+body.home .info-block .value a:hover { color: var(--home-accent-2); }
+body.home .info-block .sub { color: var(--home-muted); font-size: 15px; }
+
+/* Service-area panels (page-scoped inline component) */
+body.home .area-panel {
+  background: var(--home-surface); border: 1px solid var(--home-border);
+  box-shadow: var(--home-shadow);
+}
+body.home .area-panel h3 { color: var(--home-charcoal); font-size: 24px; }
+body.home .area-panel .flag { color: var(--home-teal); }
+body.home .area-list li { color: var(--home-ink); font-size: 16.5px; }
