@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5">
-  <link rel="stylesheet" href="css/home.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/home.css?v=6">
   <script>document.documentElement.className += ' js';</script>
 </head>
 <body class="home">
@@ -90,6 +90,8 @@
 <section class="hero">
   <div class="grid-fx"></div>
   <div class="hero-mesh"></div>
+  <div class="hero-orb hero-orb--a" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb--b" aria-hidden="true"></div>
   <div class="hero-wrap">
     <div class="hero-grid">
       <div class="hero-inner">
@@ -97,7 +99,7 @@
         <h1 class="reveal d1">Your technology, <em class="grad-text">perfectly in sync.</em></h1>
         <p class="lead reveal d2">SyncIT is the managed IT partner for growing businesses across Nassau County, Long Island, NYC, and the Boca Raton area. We monitor, secure, and run your entire technology environment — on-site and remote — so your team can stop thinking about IT and focus on the work that matters.</p>
         <div class="hero-ctas reveal d3">
-          <a href="contact.html" class="btn btn-primary btn-lg">Get a Free IT Assessment</a>
+          <a href="#discovery" class="btn btn-primary btn-lg">Get a Free IT Assessment</a>
           <a href="services.html" class="btn btn-outline btn-lg">Explore Our Services</a>
         </div>
         <div class="hero-trust reveal d4">
@@ -120,19 +122,34 @@
         </div>
       </div>
       <div class="hero-visual reveal-scale d2">
-        <div class="hero-photo">
-          <img src="images/hero-team.jpg" width="1600" height="1067" alt="SyncIT engineers collaborating on managed IT and cybersecurity" fetchpriority="high">
-          <span class="sync-live-tag"><span class="dot"></span> Live &amp; monitored</span>
-          <div class="hero-photo-chip">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
-            &lt;15 min response
+        <div class="hero-offer">
+          <div class="hero-offer-photo">
+            <img src="images/hero-team.jpg" width="1600" height="1067" alt="SyncIT engineers collaborating on managed IT and cybersecurity" fetchpriority="high">
+            <span class="sync-live-tag"><span class="dot"></span> Live &amp; monitored</span>
           </div>
-          <div class="hero-photo-card">
-            <span class="hpc-dot"></span>
-            <div class="hpc-text">
-              <strong>All systems in sync</strong>
-              <span>99.98% uptime · 24/7 monitored</span>
+          <form class="discovery-card" id="discovery" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="dc-badge"><span class="dc-dot"></span> Free · 30 minutes · no obligation</div>
+            <h3>Book a 30-Minute Discovery Call</h3>
+            <p>See exactly where your IT stands — and the fastest path to fully managed, secure technology.</p>
+            <div class="dc-field">
+              <input type="text" name="name" required placeholder="First name" autocomplete="given-name">
             </div>
+            <div class="dc-field">
+              <input type="email" name="email" required placeholder="Work email" autocomplete="email">
+            </div>
+            <input type="hidden" name="_subject" value="New SyncIT lead — 30-min Discovery Call">
+            <input type="hidden" name="source" value="Homepage hero — Discovery Call">
+            <button type="submit" class="btn btn-primary">Book My Discovery Call →</button>
+            <div class="dc-trust">
+              <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Same-day reply</span>
+              <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> No obligation</span>
+              <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 90-day guarantee</span>
+            </div>
+          </form>
+          <div class="discovery-success" id="discovery-success" hidden>
+            <div class="ds-check"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>You're on the calendar path!</h3>
+            <p>Thanks — we'll reach out today to lock in your 30-minute call. Need us sooner? Call <a href="tel:+15167749700">(516) 774-9700</a>.</p>
           </div>
         </div>
       </div>
@@ -291,14 +308,73 @@
   <div class="container">
     <div class="text-center">
       <span class="eyebrow reveal">How It Works</span>
-      <h2 class="section-title reveal d1">Fully managed in four simple steps</h2>
-      <p class="section-subtitle reveal d2">A clear path from wherever you are today to a secure, modern, fully managed IT environment.</p>
+      <h2 class="section-title reveal d1">From first call to fully managed &amp; secure</h2>
+      <p class="section-subtitle reveal d2">A clear, guided path — we assess, plan, and migrate, then manage and protect your technology around the clock.</p>
     </div>
-    <div class="steps">
-      <div class="step reveal"><div class="num">1</div><h3>Assess</h3><p>We review your systems, security, and pain points — then show you exactly where you stand, free of charge.</p></div>
-      <div class="step reveal d1"><div class="num">2</div><h3>Plan</h3><p>You get a clear, fixed-price roadmap tailored to your business, budget, and compliance needs.</p></div>
-      <div class="step reveal d2"><div class="num">3</div><h3>Sync</h3><p>Our engineers migrate, secure, and connect everything — with zero downtime and no disruption to your team.</p></div>
-      <div class="step reveal d3"><div class="num">4</div><h3>Manage</h3><p>We monitor, support, and improve your IT 24/7 — on-site and remote — so it just works, every day.</p></div>
+
+    <div class="flow reveal-scale" id="onboard-flow" aria-label="SyncIT onboarding and security process">
+      <div class="flow-track">
+        <div class="flow-node" style="--d:.10s">
+          <div class="flow-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </div>
+          <span class="flow-step">Step 1</span>
+          <h4>Assess</h4>
+          <p>Free review of your systems, security &amp; biggest risks.</p>
+        </div>
+
+        <div class="flow-link" style="--d:.42s"><i class="flow-packet"></i></div>
+
+        <div class="flow-node" style="--d:.72s">
+          <div class="flow-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V7a2 2 0 0 1 2-2h5l2 2h5a2 2 0 0 1 2 2v9"/><path d="M4 18l4-4 3 2 4-5 5 4"/></svg>
+          </div>
+          <span class="flow-step">Step 2</span>
+          <h4>Plan</h4>
+          <p>A clear, fixed-price roadmap built for your business.</p>
+        </div>
+
+        <div class="flow-link" style="--d:1.04s"><i class="flow-packet"></i></div>
+
+        <div class="flow-node" style="--d:1.34s">
+          <div class="flow-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a8 8 0 0 1 13.5-4.5L20 9"/><path d="M20 4v5h-5"/><path d="M20 13a8 8 0 0 1-13.5 4.5L4 15"/><path d="M4 20v-5h5"/></svg>
+          </div>
+          <span class="flow-step">Step 3</span>
+          <h4>Sync</h4>
+          <p>We migrate, secure &amp; connect everything — zero downtime.</p>
+        </div>
+
+        <div class="flow-link" style="--d:1.66s"><i class="flow-packet"></i></div>
+
+        <div class="flow-node" style="--d:1.96s">
+          <div class="flow-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg>
+          </div>
+          <span class="flow-step">Step 4</span>
+          <h4>Manage</h4>
+          <p>24/7 monitoring, help desk &amp; on-site support.</p>
+        </div>
+
+        <div class="flow-link flow-link--secure" style="--d:2.28s"><i class="flow-packet"></i></div>
+
+        <div class="flow-node flow-node--secure" style="--d:2.58s">
+          <div class="flow-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <span class="flow-step">Always on</span>
+          <h4>Secure</h4>
+          <p>AI-assisted protection &amp; future-proofing, every day.</p>
+        </div>
+      </div>
+
+      <div class="flow-caption">
+        <span class="flow-live"><i class="flow-live-dot"></i> Continuous 24/7 monitoring &amp; AI-assisted protection</span>
+        <button class="flow-replay" type="button" aria-label="Replay the process animation">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v4h4"/></svg>
+          Replay
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -487,7 +563,7 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=5"></script>
-<script src="js/home.js?v=5"></script>
+<script src="js/main.js?v=6"></script>
+<script src="js/home.js?v=6"></script>
 </body>
 </html>

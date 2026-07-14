@@ -55,6 +55,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* Cinematic onboarding → security flow: play on scroll + replay */
+  const flow = document.getElementById('onboard-flow');
+  if (flow) {
+    const playFlow = () => flow.classList.add('playing');
+    if ('IntersectionObserver' in window) {
+      const fObs = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) { playFlow(); fObs.disconnect(); }
+        });
+      }, { threshold: 0.3 });
+      fObs.observe(flow);
+    } else {
+      playFlow();
+    }
+    setTimeout(playFlow, 3200); // failsafe if observer never fires
+    const replay = flow.querySelector('.flow-replay');
+    if (replay) {
+      replay.addEventListener('click', () => {
+        flow.classList.remove('playing');
+        void flow.offsetWidth; // force reflow to restart transitions
+        requestAnimationFrame(playFlow);
+      });
+    }
+  }
+
+  /* Hero discovery-call capture form */
+  const dForm = document.getElementById('discovery');
+  const dSuccess = document.getElementById('discovery-success');
+  if (dForm && dSuccess) {
+    dForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = dForm.querySelector('button[type="submit"]');
+      const original = btn.textContent;
+      btn.textContent = 'Booking…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(dForm.action, {
+          method: 'POST',
+          body: new FormData(dForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          dForm.hidden = true;
+          dSuccess.hidden = false;
+        } else {
+          btn.textContent = 'Error — call (516) 774-9700';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — call (516) 774-9700';
+        btn.disabled = false;
+      }
+    });
+  }
+
   /* Subtle parallax on hero visual */
   const visual = document.querySelector('.hero-visual');
   if (visual && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
