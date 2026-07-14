@@ -757,6 +757,7 @@ body.home .reveal-scale.in { opacity: 1; transform: none; }
 @media (max-width: 768px) {
   body.home .hero-wrap { padding-top: 48px; }
   body.home .hero-stats-inner { grid-template-columns: repeat(2, 1fr); }
+  body.home .hero-stat + .hero-stat::after { display: none; }
   body.home .hero-trust { flex-direction: column; }
   body.home .trust-item { min-width: 0; }
   body.home .section { padding: 72px 20px; }
@@ -770,6 +771,174 @@ body.home .reveal-scale.in { opacity: 1; transform: none; }
   body.home .hero-ctas .btn { width: 100%; }
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   Premium elevation layer (v2) — depth, motion, polish
+═══════════════════════════════════════════════════════════════ */
+
+/* Logo — extra life: comet trail + inner counter-orbit dot */
+body.home .logo-mark .lm-comet2 { filter: drop-shadow(0 0 2px #22D3EE); }
+body.home .logo-mark .lm-trail { opacity: .4; }
+
+/* Accent pill (Boca Raton) */
+body.home .pill-accent {
+  background: linear-gradient(135deg, rgba(11,127,232,.1), rgba(18,165,148,.1));
+  border-color: rgba(18,165,148,.35);
+  color: var(--home-accent);
+  font-weight: 700;
+}
+
+/* Hero — floating depth + orbital motion */
+body.home .hero-mesh { animation: heroMeshDrift 20s ease-in-out infinite; will-change: transform; }
+@keyframes heroMeshDrift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-2.5%, 2%, 0); }
+}
+body.home .sync-showcase { animation: showcaseFloat 7s ease-in-out infinite; will-change: transform; }
+@keyframes showcaseFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+body.home .sync-showcase-svg .sat > circle:first-child { transform-box: fill-box; transform-origin: center; }
+
+/* Hero metrics — refined dividers + top accent */
+body.home .hero-stats-inner { position: relative; }
+body.home .hero-stats-inner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 28px; right: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--home-accent), var(--home-teal), transparent);
+  opacity: .55;
+}
+body.home .hero-stat { position: relative; }
+body.home .hero-stat + .hero-stat::after {
+  content: '';
+  position: absolute;
+  left: -8px; top: 24%; bottom: 24%;
+  width: 1px;
+  background: var(--home-border);
+}
+
+/* Service cards — gradient icon tiles + refined hover */
+body.home .service-icon {
+  background: linear-gradient(135deg, rgba(11,127,232,.12), rgba(18,165,148,.12));
+  box-shadow: inset 0 0 0 1px rgba(11,127,232,.06);
+}
+body.home .service-card:hover .service-icon {
+  background: linear-gradient(135deg, rgba(11,127,232,.2), rgba(18,165,148,.18));
+  box-shadow: inset 0 0 0 1px rgba(11,127,232,.14), 0 6px 16px rgba(11,127,232,.12);
+}
+body.home .service-card .learn-more {
+  display: inline-flex;
+  align-items: center;
+  transition: color .25s, transform .25s;
+}
+body.home .service-card:hover .learn-more { color: var(--home-teal); transform: translateX(3px); }
+
+/* SyncIT Switch — live dashboard feel */
+body.home .sync-panel-scan { position: absolute; inset: 0; overflow: hidden; pointer-events: none; border-radius: inherit; }
+body.home .sync-panel-scan::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 38%;
+  top: -38%;
+  background: linear-gradient(180deg, transparent, rgba(52,211,153,.06), transparent);
+  animation: panelScan 4.5s ease-in-out infinite;
+}
+@keyframes panelScan { 0% { top: -38%; } 100% { top: 100%; } }
+body.home .sync-panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+body.home .sync-panel-uptime { font-size: 12px; color: rgba(255,255,255,.55); letter-spacing: .02em; }
+body.home .sync-panel-uptime strong { display: block; color: #6EE7B7; font-size: 18px; font-weight: 700; letter-spacing: -.01em; }
+body.home .sync-bars { display: flex; align-items: flex-end; gap: 3px; height: 26px; }
+body.home .sync-bars span {
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #34D399, var(--home-teal));
+  transform-origin: bottom;
+  animation: barPulse 1.7s ease-in-out infinite;
+}
+body.home .sync-bars span:nth-child(1) { height: 40%; animation-delay: 0s; }
+body.home .sync-bars span:nth-child(2) { height: 70%; animation-delay: .2s; }
+body.home .sync-bars span:nth-child(3) { height: 55%; animation-delay: .4s; }
+body.home .sync-bars span:nth-child(4) { height: 90%; animation-delay: .6s; }
+body.home .sync-bars span:nth-child(5) { height: 65%; animation-delay: .8s; }
+@keyframes barPulse { 0%, 100% { transform: scaleY(.55); } 50% { transform: scaleY(1); } }
+
+/* How it works — traveling highlight along the timeline */
+body.home .steps::after {
+  content: '';
+  position: absolute;
+  top: 47px;
+  left: 12%;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--home-teal);
+  box-shadow: 0 0 14px var(--home-teal);
+  z-index: 0;
+  animation: stepTravel 6s ease-in-out infinite;
+}
+@keyframes stepTravel {
+  0% { left: 12%; opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { left: 88%; opacity: 0; }
+}
+
+/* Testimonials — top accent reveal + avatar ring */
+body.home .quote-card { overflow: hidden; }
+body.home .quote-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--home-accent), var(--home-teal));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s cubic-bezier(.2,.7,.2,1);
+}
+body.home .quote-card:hover::after { transform: scaleX(1); }
+body.home .quote-card .who .av {
+  box-shadow: 0 0 0 3px rgba(11,127,232,.12);
+}
+
+/* Final CTA — animated glow + trust row */
+body.home .cta-banner::before { animation: ctaGlow 11s ease-in-out infinite; will-change: transform, opacity; }
+@keyframes ctaGlow {
+  0%, 100% { opacity: .85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+body.home .cta-trust {
+  display: flex;
+  gap: 14px 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+body.home .cta-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.72);
+  font-size: 13.5px;
+  font-weight: 500;
+}
+body.home .cta-trust svg { stroke: var(--home-teal); flex-shrink: 0; }
+
+@media (max-width: 1024px) {
+  body.home .steps::after { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   body.home .logo-mark .lm-rotor,
   body.home .logo-mark .lm-rotor-rev,
@@ -777,8 +946,14 @@ body.home .reveal-scale.in { opacity: 1; transform: none; }
   body.home .logo-mark .lm-glow,
   body.home .logo-mark .lm-core,
   body.home .hero .grid-fx,
+  body.home .hero-mesh,
+  body.home .sync-showcase,
+  body.home .sync-panel-scan::before,
+  body.home .sync-bars span,
+  body.home .steps::after,
+  body.home .cta-banner::before,
   body.home .sync-panel-status .live-dot,
   body.home .sync-panel-row .indicator,
   body.home .sync-panel-row .badge-live,
-  body.home .step.in .num { animation: none; }
+  body.home .step.in .num { animation: none !important; }
 }
