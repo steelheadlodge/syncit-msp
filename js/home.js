@@ -1,6 +1,25 @@
 /* SyncIT MSP — homepage interactions */
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* Failsafe: never let reveal elements stay hidden (e.g. stale/broken JS). */
+  const forceReveal = () => {
+    document.querySelectorAll('.reveal, .reveal-scale').forEach(el => el.classList.add('in'));
+    document.querySelectorAll('.home .step').forEach(el => el.classList.add('in'));
+  };
+  window.addEventListener('load', () => setTimeout(forceReveal, 2600));
+
+  /* Cursor spotlight on cards */
+  if (!window.matchMedia('(hover: none)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.service-card, .why-card, .quote-card').forEach(card => {
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        card.style.setProperty('--my', `${e.clientY - r.top}px`);
+      });
+    });
+  }
+
   /* Steps stagger animation */
   const steps = document.querySelectorAll('.home .step');
   if (steps.length && 'IntersectionObserver' in window) {
