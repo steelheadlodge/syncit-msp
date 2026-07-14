@@ -1859,4 +1859,6 @@ body.home .nav-call:active { background: rgba(59,130,246,.3); }
     justify-content: center; text-align: center;
     font-size: 12px; letter-spacing: .8px; padding: 8px 16px; line-height: 1.4;
   }
+  /* Strategy Call heading: fit cleanly on all phones (wraps as "Book a 30-Minute" / "Strategy Call") */
+  body.home .discovery-card h3 { font-size: 21px; line-height: 1.2; letter-spacing: -0.01em; }
 }

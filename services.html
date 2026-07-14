@@ -16,8 +16,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=15">
-  <link rel="stylesheet" href="css/home.css?v=15">
+  <link rel="stylesheet" href="css/style.css?v=16">
+  <link rel="stylesheet" href="css/home.css?v=16">
   <script>document.documentElement.className += ' js';</script>
 </head>
 <body class="home">
@@ -26,14 +26,32 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="lg1" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#2563EB"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs>
-        <rect x="1.5" y="1.5" width="45" height="45" rx="12" fill="#0A1A2F"/>
-        <g class="ring">
-          <path d="M15 20a10 10 0 0 1 17-3.5" stroke="url(#lg1)" stroke-width="3.2" stroke-linecap="round"/>
-          <path d="M33 28a10 10 0 0 1-17 3.5" stroke="url(#lg1)" stroke-width="3.2" stroke-linecap="round"/>
-          <path d="M31 12.5l1.6 4.6-4.7 1.3" stroke="url(#lg1)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M17 35.5l-1.6-4.6 4.7-1.3" stroke="url(#lg1)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="lg1" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/>
+          </linearGradient>
+          <radialGradient id="lgGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#22D3EE" stop-opacity=".55"/>
+            <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect x="1.5" y="1.5" width="45" height="45" rx="13" fill="#16181C"/>
+        <rect x="1.5" y="1.5" width="45" height="45" rx="13" fill="none" stroke="url(#lg1)" stroke-width="1" opacity=".25"/>
+        <circle class="lm-glow" cx="24" cy="24" r="13" fill="url(#lgGlow)"/>
+        <circle class="lm-breathe" cx="24" cy="24" r="15" fill="none" stroke="url(#lg1)" stroke-width="1" opacity=".3"/>
+        <g class="lm-rotor">
+          <circle cx="24" cy="24" r="12" fill="none" stroke="url(#lg1)" stroke-width="2.6"
+                  stroke-linecap="round" stroke-dasharray="44 31"/>
+          <path class="lm-trail" d="M24 12 A12 12 0 0 0 13.5 18.4" fill="none" stroke="#22D3EE"
+                stroke-width="2.4" stroke-linecap="round"/>
+          <circle class="lm-comet" cx="24" cy="12" r="2.5" fill="#BFF7FF"/>
         </g>
+        <g class="lm-rotor-rev">
+          <circle cx="24" cy="24" r="6.5" fill="none" stroke="url(#lg1)" stroke-width="1.6"
+                  stroke-linecap="round" stroke-dasharray="14 26" opacity=".8"/>
+          <circle class="lm-comet2" cx="24" cy="17.5" r="1.7" fill="#BFF7FF"/>
+        </g>
+        <circle class="lm-core" cx="24" cy="24" r="3.4" fill="url(#lg1)"/>
       </svg>
       <div><div class="brand">Sync<span>IT</span></div><div class="tagline">Managed IT · NY &amp; FL</div></div>
     </a>
@@ -247,7 +265,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand">Sync<span>IT</span></div>
-        <p>The fast, safe way to fully managed IT. Managed IT, cybersecurity, cloud, and on-site support for businesses across the Tristate area and Florida.</p>
+        <p>The fast, safe way to fully managed IT. Managed IT, cybersecurity, cloud, and on-site support for businesses across the New York Tri-State area and South Florida.</p>
       </div>
       <div>
         <h4>Services</h4>
@@ -274,18 +292,18 @@
         <ul>
           <li><a href="tel:+15167749700">(516) 774-9700</a></li>
           <li><a href="mailto:hello@syncitmsp.com">hello@syncitmsp.com</a></li>
-          <li>Tristate Area, NY</li>
-          <li>Florida</li>
+          <li>New York Tri-State</li>
+          <li>South Florida</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> SyncIT MSP. All rights reserved.</span>
-      <span>Managed IT &amp; Cybersecurity · Tristate Area &amp; Florida</span>
+      <span>Managed IT &amp; Cybersecurity · New York Tri-State &amp; South Florida</span>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js?v=15"></script>
+<script src="js/main.js?v=16"></script>
 </body>
 </html>
