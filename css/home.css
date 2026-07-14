@@ -285,6 +285,7 @@ body.home .hero h1 {
   color: var(--home-charcoal);
   margin-bottom: 22px;
   letter-spacing: -0.04em;
+  word-spacing: 0.12em;
 }
 body.home .hero h1 .grad-text {
   background: linear-gradient(135deg, var(--home-accent) 0%, var(--home-teal) 100%);
