@@ -1618,57 +1618,67 @@ body.home .service-grid > *:nth-child(3n) .service-card::after,
 body.home .service-grid > *:nth-child(3n).service-card::after { background: linear-gradient(90deg, #0EA5A5, #22D3EE); }
 
 /* ══ Readability — LARGE, comfortable type everywhere ══════ */
-body.home { font-size: 19px; }
-body.home .nav-links a { font-size: 18px; }
-body.home .nav-links .btn-nav-cta { font-size: 16.5px; }
-body.home .nav-logo .tagline { font-size: 12px; }
+body.home { font-size: 20px; }
+body.home .nav-links a { font-size: 18.5px; }
+body.home .nav-links .btn-nav-cta { font-size: 17px; }
+body.home .nav-logo .tagline { font-size: 12.5px; }
 
-body.home .hero-eyebrow { font-size: 15px; }
-body.home .hero h1 { font-size: clamp(46px, 6.2vw, 78px); }
-body.home .hero .lead { font-size: clamp(20px, 1.7vw, 24px); line-height: 1.58; }
+body.home .hero-eyebrow { font-size: 15.5px; }
+/* H1 dialed back + each phrase kept on its own single line */
+body.home .hero h1 { font-size: clamp(38px, 4vw, 56px); line-height: 1.06; }
+body.home .hero h1 .hl,
+body.home .hero h1 .grad-text { display: block; white-space: nowrap; }
+body.home .hero .lead { font-size: clamp(20px, 1.6vw, 24px); line-height: 1.55; }
 
-body.home .eyebrow { font-size: 15px; letter-spacing: 1.6px; }
-body.home .section-title { font-size: clamp(32px, 3.8vw, 48px); }
-body.home .section-subtitle { font-size: 22px; line-height: 1.58; max-width: 840px; }
+body.home .eyebrow { font-size: 15.5px; letter-spacing: 1.6px; }
+body.home .section-title { font-size: clamp(33px, 3.8vw, 49px); }
+body.home .section-subtitle { font-size: 22px; line-height: 1.55; max-width: 860px; }
 
-body.home .service-card h3 { font-size: 22px; }
-body.home .service-card p { font-size: 18px; line-height: 1.6; }
-body.home .service-card .learn-more { font-size: 16px; }
+body.home .service-card h3 { font-size: 23px; }
+body.home .service-card p { font-size: 18.5px; line-height: 1.58; }
+body.home .service-card .learn-more { font-size: 16.5px; }
 
 body.home .why-card h3 { font-size: 21px; }
-body.home .why-card p { font-size: 18px; line-height: 1.6; }
+body.home .why-card p { font-size: 18.5px; line-height: 1.58; }
 
-body.home .trust-item strong { font-size: 17px; }
-body.home .trust-item { font-size: 15px; }
-body.home .hero-stat-label { font-size: 15px; }
+body.home .trust-item strong { font-size: 18.5px; }
+body.home .trust-item,
+body.home .trust-item div { font-size: 16.5px; line-height: 1.4; }
+body.home .hero-stat-label { font-size: 16px; }
 
-body.home .check-list li { font-size: 18px; }
+body.home .check-list li { font-size: 18.5px; }
 
-body.home .quote-card p { font-size: 19px; line-height: 1.65; }
-body.home .quote-card .who .nm { font-size: 17px; }
-body.home .quote-card .who .rl { font-size: 15px; }
+body.home .quote-card p { font-size: 19.5px; line-height: 1.62; }
+body.home .quote-card .who .nm { font-size: 17.5px; }
+body.home .quote-card .who .rl { font-size: 15.5px; }
 
 body.home .discovery-card h3 { font-size: 25px; }
-body.home .discovery-card p { font-size: 17px; }
-body.home .dc-field input { font-size: 17px; }
-body.home .dc-trust span { font-size: 14px; }
+body.home .discovery-card p { font-size: 17.5px; }
+body.home .dc-field input { font-size: 17.5px; }
+body.home .dc-trust span { font-size: 15px; }
 
-body.home .sync-panel-row .label { font-size: 16px; }
-body.home .sync-panel-title { font-size: 16px; }
+body.home .sync-panel-row .label { font-size: 16.5px; }
+body.home .sync-panel-title { font-size: 16.5px; }
 
-body.home .logostrip .label { font-size: 13px; }
-body.home .marquee span { font-size: 17px; }
+body.home .logostrip .label { font-size: 14px; }
+body.home .marquee span { font-size: 18px; }
 
-body.home .flow-node h4 { font-size: 18px; }
-body.home .flow-node p { font-size: 15px; }
+body.home .flow-node h4 { font-size: 19px; }
+body.home .flow-node p { font-size: 16px; }
 
-body.home .image-band h2 { font-size: clamp(32px, 4.6vw, 52px); }
+body.home .image-band h2 { font-size: clamp(33px, 4.6vw, 52px); }
 body.home .image-band p { font-size: clamp(18px, 1.6vw, 21px); }
 
-body.home .footer-brand p { font-size: 16px; }
+body.home .footer-brand p { font-size: 17px; }
 body.home .footer-grid ul li,
-body.home .footer-grid ul a { font-size: 16px; }
-body.home .footer-grid h4 { font-size: 16.5px; }
+body.home .footer-grid ul a { font-size: 17px; }
+body.home .footer-grid h4 { font-size: 17px; }
+
+@media (max-width: 560px) {
+  body.home .hero h1 { white-space: normal; font-size: 34px; }
+  body.home .hero h1 .hl,
+  body.home .hero h1 .grad-text { white-space: normal; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   body.home .service-icon::before,
