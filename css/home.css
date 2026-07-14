@@ -1801,3 +1801,62 @@ body.home .area-panel {
 body.home .area-panel h3 { color: var(--home-charcoal); font-size: 24px; }
 body.home .area-panel .flag { color: var(--home-teal); }
 body.home .area-list li { color: var(--home-ink); font-size: 16.5px; }
+
+/* ═══════════════════════════════════════════════════════════════
+   Mobile correctness & polish (phones)
+═══════════════════════════════════════════════════════════════ */
+/* Never allow sideways scroll / clipped text on phones */
+html { overflow-x: hidden; }
+body.home { overflow-x: hidden; }
+
+/* Let grid/flex items shrink to the viewport instead of blowing it out
+   (this is what caused the hero text + cards to get cut off on the right) */
+body.home .hero-grid { min-width: 0; }
+body.home .hero-grid > * { min-width: 0; }
+body.home .hero-inner { min-width: 0; }
+body.home .hero-visual { min-width: 0; max-width: 100%; }
+body.home .discovery-card,
+body.home .hero-offer,
+body.home .hero-photo,
+body.home .hero-offer-photo img,
+body.home .hero-photo img { max-width: 100%; }
+body.home .hero .lead,
+body.home .hero-eyebrow,
+body.home .svc-body p,
+body.home .col-text p { overflow-wrap: break-word; }
+
+/* Hamburger: light bars so it reads on the dark bar */
+body.home .nav-toggle span { background: #E9EEF6; }
+
+/* Quick tap-to-call button beside the hamburger (mobile only) */
+body.home .nav-call {
+  display: none; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 12px;
+  border: 1px solid var(--home-border-strong);
+  background: rgba(59,130,246,.16); color: var(--home-accent-2);
+  margin-left: auto; margin-right: 6px; flex-shrink: 0;
+}
+body.home .nav-call svg { width: 21px; height: 21px; stroke: currentColor; }
+body.home .nav-call:active { background: rgba(59,130,246,.3); }
+
+@media (max-width: 768px) {
+  body.home .nav-call { display: inline-flex; }
+  /* Dark, on-theme mobile dropdown menu (was white) */
+  body.home .nav-links {
+    top: 100%; background: #0E1626;
+    border-bottom: 1px solid var(--home-border);
+    box-shadow: 0 16px 34px rgba(0,0,0,.55);
+  }
+  body.home .nav-links a { color: var(--home-charcoal); }
+  body.home .nav-links a:hover { background: rgba(255,255,255,.06); color: #fff; }
+}
+
+@media (max-width: 560px) {
+  /* Tidy, centered eyebrow pill */
+  body.home .hero-eyebrow {
+    display: flex; width: fit-content; max-width: 100%;
+    margin-left: auto; margin-right: auto;
+    justify-content: center; text-align: center;
+    font-size: 12px; letter-spacing: .8px; padding: 8px 16px; line-height: 1.4;
+  }
+}
