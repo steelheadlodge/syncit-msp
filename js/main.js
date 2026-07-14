@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ── Scroll reveal ──────────────────────────────────── */
-  const revealEls = document.querySelectorAll('.reveal');
+  const revealEls = document.querySelectorAll('.reveal, .reveal-scale');
   if ('IntersectionObserver' in window && revealEls.length) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
