@@ -1,4 +1,21 @@
 /* SyncIT MSP — interactions: mobile nav, scroll reveal, count-up, nav shrink */
+
+/* Fresh page loads should start at the top. The browser's default scroll
+   restoration can reload you mid-page (common on mobile Safari), so disable
+   it — but still honor a real anchor link (e.g. the Industries menu item),
+   then clear the hash so the next reload also starts clean. */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('load', () => {
+  const id = location.hash.slice(1);
+  const target = id && document.getElementById(id);
+  if (target) {
+    target.scrollIntoView();
+    history.replaceState(null, '', location.pathname + location.search);
+  } else {
+    window.scrollTo(0, 0);
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Mobile nav toggle ──────────────────────────────── */
