@@ -607,6 +607,9 @@ body.home .section-subtitle {
 }
 body.home .section-ink .section-subtitle { color: rgba(255,255,255,.65); }
 body.home .section-ink .eyebrow { color: var(--home-teal); }
+/* Brand-name eyebrows read clean white, not tinted */
+body.home .eyebrow.eyebrow-white,
+body.home .section-ink .eyebrow.eyebrow-white { color: #F2F5FA; }
 
 /* ── Service cards ────────────────────────────────────────── */
 body.home .service-grid { gap: 20px; }
