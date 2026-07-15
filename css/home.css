@@ -607,9 +607,13 @@ body.home .section-subtitle {
 }
 body.home .section-ink .section-subtitle { color: rgba(255,255,255,.65); }
 body.home .section-ink .eyebrow { color: var(--home-teal); }
-/* Brand-name eyebrows read clean white, not tinted */
-body.home .eyebrow.eyebrow-white,
-body.home .section-ink .eyebrow.eyebrow-white { color: #F2F5FA; }
+/* Brand wordmark inside eyebrows: "Sync" white, "IT" blue/cyan (matches the logo) */
+body.home .eyebrow .eb-sync { color: #F2F5FA; }
+body.home .eyebrow .eb-it {
+  background: linear-gradient(120deg, #38BDF8, #22D3EE);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* ── Service cards ────────────────────────────────────────── */
 body.home .service-grid { gap: 20px; }
