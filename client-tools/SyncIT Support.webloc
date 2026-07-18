@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>URL</key>
+	<string>mailto:support@syncitmsp.com?subject=SyncIT%20Support%20Request&amp;body=Company%20Name%3A%20%0D%0AYour%20Name%3A%20%0D%0APhone%3A%20%0D%0AUrgency%20%28Low%20%2F%20Medium%20%2F%20High%29%3A%20%0D%0A%0D%0AWhat%20is%20the%20problem%3F%0D%0A%0D%0AWhen%20did%20it%20start%3F%0D%0A%0D%0AAny%20error%20messages%3F%0D%0A%0D%0ADevice%20%28computer%20name%20or%20%23%29%3A%20</string>
+</dict>
+</plist>
