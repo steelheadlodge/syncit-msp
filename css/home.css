@@ -981,10 +981,12 @@ body.home .reveal-scale.in { opacity: 1; transform: none; }
 
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  body.home .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  body.home .hero-visual { max-width: 480px; margin: 0 auto; }
   body.home .steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   body.home .steps::before { display: none; }
+}
+@media (max-width: 900px) {
+  body.home .hero-grid { grid-template-columns: 1fr; gap: 40px; max-width: 640px; margin: 0 auto; }
+  body.home .hero-visual { max-width: 100%; margin: 0; }
 }
 @media (max-width: 768px) {
   body.home .hero-wrap { padding-top: 48px; }
