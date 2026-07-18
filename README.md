@@ -40,13 +40,23 @@ Shared assets: `css/style.css`, `js/main.js`, `favicon.svg`.
 
 ## Before you publish — required edits
 
-1. **Formspree endpoint** — in `contact.html`, replace `https://formspree.io/f/your-form-id`
-   with your real Formspree form ID (create a free form at formspree.io).
-2. **Phone number** — placeholder `(516) 774-9700` appears in every page's topbar/footer/contact.
-   Find & replace with the real number (also the `tel:+15167749700` links).
-3. **Email** — placeholder `hello@syncitmsp.com`. Replace if different.
+1. **Formspree endpoint** — in `contact.html`, `index.html`, `ny.html`, `fl.html`, replace
+   `https://formspree.io/f/your-form-id` with your real Formspree form ID.
+2. **Phone numbers** — live numbers are wired in:
+   - NY (primary / nav): `(516) 308-1001` → `tel:+15163081001`
+   - FL: `(954) 501-0072` → `tel:+19545010072`
+3. **Email** — `support@syncitmsp.com` (support/tickets) and `hello@syncitmsp.com` (general).
+   Confirm both aliases exist in Google Workspace.
 4. **Social links** — footer LinkedIn/Facebook/X `href="#"` — point to real profiles or remove.
 5. **Testimonials** — home page quotes are representative placeholders; swap for real client quotes.
+
+## Regional landing pages
+
+- `ny.html` — New York Tri-State landing (516 number, Long Island/NYC/Westchester/NJ/CT).
+- `fl.html` — South Florida landing (954 number, Broward/Palm Beach/Miami-Dade).
+
+Both reference shared assets via absolute `https://syncitmsp.com/...` URLs and link back to the
+main site, so they work whether served at `syncitmsp.com/ny.html` **or** at their own domain root.
 
 ## Deploy (GitHub Pages)
 
@@ -57,5 +67,14 @@ Shared assets: `css/style.css`, `js/main.js`, `favicon.svg`.
 4. `.nojekyll` is included so GitHub Pages serves files as-is.
 5. Enable **Enforce HTTPS** in Pages settings once the cert provisions.
 
-Point `syncitny.com` and `syncitfl.com` at the same site (301 redirect to `syncitmsp.com`)
-or serve them as regional landing pages later.
+### Pointing syncitny.com / syncitfl.com at the landing pages
+
+GitHub Pages serves **one** custom domain per repo (the apex in `CNAME` = `syncitmsp.com`),
+so the two regional domains can't be a second CNAME on this repo. Two options:
+
+- **Easiest — redirect (recommended):** at your DNS/registrar (or a Cloudflare redirect rule),
+  301 `syncitny.com` → `https://syncitmsp.com/ny.html` and `syncitfl.com` → `https://syncitmsp.com/fl.html`.
+  The pages set `<link rel="canonical">` to the regional domains so SEO stays clean.
+- **Independent hosting:** create a separate GitHub Pages repo per domain (each with its own
+  `CNAME`) and drop the matching landing page in as `index.html`. Assets already load from
+  `syncitmsp.com`, so no copying needed.

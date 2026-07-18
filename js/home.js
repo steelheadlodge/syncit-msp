@@ -142,11 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
           dForm.hidden = true;
           dSuccess.hidden = false;
         } else {
-          btn.textContent = 'Error — call (516) 774-9700';
+          btn.textContent = 'Error — call (516) 308-1001';
           btn.disabled = false;
         }
       } catch {
-        btn.textContent = 'Error — call (516) 774-9700';
+        btn.textContent = 'Error — call (516) 308-1001';
         btn.disabled = false;
       }
     });
