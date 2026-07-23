@@ -58,7 +58,7 @@ body.home .nav-logo .brand {
   display: inline-flex; align-items: baseline; line-height: 1;
 }
 body.home .nav-logo .brand span {
-  font-size: 1.14em; font-weight: 900; letter-spacing: -0.01em; margin-left: 0;
+  font-size: 1.14em; font-weight: 800; letter-spacing: -0.01em; margin-left: 0;
   background: linear-gradient(120deg, #38BDF8, #22D3EE);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -91,7 +91,17 @@ body.home .nav-links .btn-nav-cta:hover {
 body.home .logo-mark {
   width: 62px; height: 62px;
   overflow: visible;
-  filter: drop-shadow(0 4px 16px rgba(59,130,246,.45));
+  /* Blue/cyan halo behind the mark for depth, plus a soft ground shadow */
+  filter: drop-shadow(0 0 9px rgba(34,211,238,.55))
+          drop-shadow(0 0 20px rgba(59,130,246,.45))
+          drop-shadow(0 3px 7px rgba(0,0,0,.40));
+  transition: filter .25s ease, transform .25s ease;
+}
+body.home .nav-logo:hover .logo-mark {
+  filter: drop-shadow(0 0 12px rgba(34,211,238,.78))
+          drop-shadow(0 0 28px rgba(59,130,246,.58))
+          drop-shadow(0 3px 7px rgba(0,0,0,.40));
+  transform: translateY(-1px);
 }
 body.home .logo-mark g,
 body.home .logo-mark .lm-breathe,
