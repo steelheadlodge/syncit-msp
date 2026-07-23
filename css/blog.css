@@ -1,0 +1,59 @@
+/* SyncIT Insights / blog */
+.blog-hero {
+  padding: 120px 0 48px;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(37,99,235,.08), transparent 55%),
+    linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+  border-bottom: 1px solid var(--border, #e2e8f0);
+}
+.blog-hero .eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #64748b; margin-bottom: 14px; }
+.blog-hero h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: var(--home-charcoal, #0B1220); line-height: 1.15; margin: 0 0 14px; letter-spacing: -.02em; }
+.blog-hero p { font-size: 17px; color: #64748b; max-width: 560px; line-height: 1.6; margin: 0; }
+
+.blog-index { padding: 48px 0 88px; }
+.blog-grid { display: grid; gap: 22px; max-width: 760px; }
+.blog-card {
+  display: block; text-decoration: none; color: inherit;
+  padding: 28px 30px; border-radius: 16px; border: 1px solid #e2e8f0;
+  background: #fff; transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.blog-card:hover { border-color: #bfdbfe; box-shadow: 0 12px 32px rgba(15,23,42,.06); transform: translateY(-1px); }
+.blog-card .meta { font-size: 12px; font-weight: 600; color: #94a3b8; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 10px; }
+.blog-card h2 { font-size: 22px; font-weight: 700; color: #0B1220; margin: 0 0 10px; line-height: 1.25; letter-spacing: -.015em; }
+.blog-card p { font-size: 15px; color: #64748b; line-height: 1.6; margin: 0; }
+.blog-card .read { display: inline-block; margin-top: 14px; font-size: 14px; font-weight: 600; color: #1e40af; }
+
+.blog-article { padding: 110px 0 80px; }
+.blog-article .container-narrow { max-width: 680px; margin: 0 auto; padding: 0 22px; }
+.blog-article .meta { font-size: 13px; color: #94a3b8; font-weight: 600; margin-bottom: 16px; }
+.blog-article h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: #0B1220; line-height: 1.18; letter-spacing: -.02em; margin: 0 0 18px; }
+.blog-article .dek { font-size: 18px; color: #475569; line-height: 1.55; margin: 0 0 36px; }
+.blog-article .prose { font-size: 16.5px; color: #334155; line-height: 1.75; }
+.blog-article .prose h2 { font-size: 22px; font-weight: 700; color: #0B1220; margin: 36px 0 12px; letter-spacing: -.015em; }
+.blog-article .prose p { margin: 0 0 16px; }
+.blog-article .prose ul { margin: 0 0 18px; padding-left: 1.2em; }
+.blog-article .prose li { margin-bottom: 8px; }
+.blog-article .callout {
+  margin: 28px 0; padding: 20px 22px; border-radius: 14px;
+  background: #f8fafc; border: 1px solid #e2e8f0;
+}
+.blog-article .callout strong { color: #0B1220; }
+.blog-cta {
+  margin-top: 40px; padding: 28px; border-radius: 16px;
+  background: linear-gradient(145deg, #0B1220, #1e3a5f); color: #fff;
+}
+.blog-cta h3 { margin: 0 0 8px; font-size: 20px; font-weight: 700; }
+.blog-cta p { margin: 0 0 18px; color: #cbd5e1; font-size: 15px; line-height: 1.55; }
+.blog-cta .btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.blog-cta a.btn {
+  display: inline-block; padding: 12px 18px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none;
+}
+.blog-cta a.btn-primary { background: #2563eb; color: #fff; }
+.blog-cta a.btn-ghost { background: rgba(255,255,255,.08); color: #e2e8f0; border: 1px solid rgba(255,255,255,.12); }
+.blog-back { display: inline-block; margin-bottom: 22px; font-size: 14px; font-weight: 600; color: #1e40af; text-decoration: none; }
+.blog-back:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .blog-hero { padding: 100px 0 36px; }
+  .blog-card { padding: 22px; }
+}

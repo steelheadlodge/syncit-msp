@@ -24,6 +24,78 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=22">
   <link rel="stylesheet" href="css/home.css?v=22">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://syncitmsp.com/#org",
+        "name": "SyncIT MSP",
+        "url": "https://syncitmsp.com/",
+        "logo": "https://syncitmsp.com/images/logo-mark.png",
+        "image": "https://syncitmsp.com/images/og-cover.png",
+        "description": "Fully managed IT, cybersecurity, cloud, backup, help desk, and on-site support for businesses across the New York Tri-State area and South Florida.",
+        "email": "hello@syncitmsp.com",
+        "areaServed": [
+          { "@type": "State", "name": "New York" },
+          { "@type": "State", "name": "New Jersey" },
+          { "@type": "State", "name": "Connecticut" },
+          { "@type": "State", "name": "Florida" }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+1-516-308-1001",
+            "contactType": "customer service",
+            "areaServed": "US-NY",
+            "availableLanguage": "English"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+1-954-501-0072",
+            "contactType": "customer service",
+            "areaServed": "US-FL",
+            "availableLanguage": "English"
+          }
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://syncitmsp.com/#ny",
+        "name": "SyncIT MSP — New York Tri-State",
+        "parentOrganization": { "@id": "https://syncitmsp.com/#org" },
+        "url": "https://syncitmsp.com/ny.html",
+        "telephone": "+1-516-308-1001",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "181A East Jamaica Avenue",
+          "addressLocality": "Valley Stream",
+          "addressRegion": "NY",
+          "postalCode": "11580",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          "New York", "New York City", "Long Island", "Westchester", "New Jersey", "Connecticut"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://syncitmsp.com/#fl",
+        "name": "SyncIT MSP — South Florida",
+        "parentOrganization": { "@id": "https://syncitmsp.com/#org" },
+        "url": "https://syncitmsp.com/fl.html",
+        "telephone": "+1-954-501-0072",
+        "priceRange": "$$",
+        "address": { "@type": "PostalAddress", "addressRegion": "FL", "addressCountry": "US" },
+        "areaServed": [
+          "Palm Beach County", "Broward County", "Miami-Dade County", "Fort Lauderdale"
+        ]
+      }
+    ]
+  }
+  </script>
   <script>document.documentElement.className += ' js';</script>
 </head>
 <body class="home">
@@ -71,6 +143,7 @@
       <a href="services.html">Services</a>
       <a href="index.html#industries">Industries</a>
       <a href="service-area.html">Service Area</a>
+      <a href="blog/index.html">Insights</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="contact.html" class="btn-nav-cta">Free IT Assessment</a>
@@ -502,6 +575,32 @@
     </div>
     <div class="reveal" style="margin-top:34px;">
       <a href="service-area.html" class="btn btn-outline">View Full Service Area →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Insights teaser -->
+<section class="section section-tint-blue">
+  <div class="container text-center">
+    <span class="eyebrow reveal">From the Blog</span>
+    <h2 class="section-title reveal d1">SyncIT Insights</h2>
+    <p class="section-subtitle text-center reveal d2">Plain-English takes on the IT risks that actually hit small and mid-size businesses — no jargon fog.</p>
+    <div class="reveal d2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:840px;margin:34px auto 0;text-align:left;">
+      <a href="blog/mfa-isnt-optional-anymore.html" style="display:block;text-decoration:none;padding:26px 28px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);transition:border-color .15s,transform .15s;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;">Cybersecurity</div>
+        <div style="font-size:19px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:8px;">MFA isn’t optional anymore</div>
+        <div style="font-size:14.5px;color:#9fb3cc;line-height:1.6;">Stolen passwords drive most business breaches — and MFA blocks the vast majority. Where to turn it on first, without the pain.</div>
+        <span style="display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--cyan);">Read article →</span>
+      </a>
+      <a href="blog/the-backup-you-never-tested.html" style="display:block;text-decoration:none;padding:26px 28px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);transition:border-color .15s,transform .15s;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;">Backup &amp; Recovery</div>
+        <div style="font-size:19px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:8px;">The backup you never tested isn’t a backup</div>
+        <div style="font-size:14.5px;color:#9fb3cc;line-height:1.6;">Almost everyone “has backups.” Far fewer have ever restored one — and that gap is where ransomware recovery falls apart.</div>
+        <span style="display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--cyan);">Read article →</span>
+      </a>
+    </div>
+    <div class="reveal" style="margin-top:34px;">
+      <a href="blog/index.html" class="btn btn-outline">View All Insights →</a>
     </div>
   </div>
 </section>

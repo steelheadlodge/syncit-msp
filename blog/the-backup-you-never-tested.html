@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Backup You Never Tested Isn’t a Backup | SyncIT Insights</title>
+  <meta name="description" content="Most businesses have backups. Far fewer have backups they’ve actually restored. SyncIT explains why untested backups fail during ransomware — and how to prove yours works.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://syncitmsp.com/blog/the-backup-you-never-tested.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SyncIT MSP">
+  <meta property="og:url" content="https://syncitmsp.com/blog/the-backup-you-never-tested.html">
+  <meta property="og:title" content="The Backup You Never Tested Isn’t a Backup | SyncIT">
+  <meta property="og:description" content="Untested backups are where ransomware recovery goes to die. Here’s how business owners can prove their backups actually work — from SyncIT MSP.">
+  <meta property="og:image" content="https://syncitmsp.com/images/og-cover.png?v=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The backup you never tested isn’t a backup",
+    "datePublished": "2026-07-23",
+    "dateModified": "2026-07-23",
+    "author": { "@type": "Organization", "name": "SyncIT MSP" },
+    "publisher": { "@type": "Organization", "name": "SyncIT MSP", "url": "https://syncitmsp.com" },
+    "description": "Why untested backups fail during ransomware recovery — and a practical way for business owners to prove their backups actually restore.",
+    "mainEntityOfPage": "https://syncitmsp.com/blog/the-backup-you-never-tested.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=22">
+  <link rel="stylesheet" href="../css/home.css?v=22">
+  <link rel="stylesheet" href="../css/blog.css?v=1">
+  <script>document.documentElement.className += ' js';</script>
+</head>
+<body class="home">
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lg1" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/>
+          </linearGradient>
+        </defs>
+        <rect x="1.5" y="1.5" width="45" height="45" rx="13" fill="#16181C"/>
+        <circle cx="24" cy="24" r="12" fill="none" stroke="url(#lg1)" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="44 31"/>
+        <circle cx="24" cy="24" r="3.4" fill="url(#lg1)"/>
+      </svg>
+      <div>
+        <div class="brand">Sync<span>IT</span></div>
+        <div class="tagline">Managed IT · NY &amp; FL</div>
+      </div>
+    </a>
+    <a class="nav-call" href="tel:+15163081001" aria-label="Call SyncIT"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.4-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"/></svg></a>
+    <div class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></div>
+    <div class="nav-links">
+      <a href="../services.html">Services</a>
+      <a href="../index.html#industries">Industries</a>
+      <a href="../service-area.html">Service Area</a>
+      <a href="index.html">Insights</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../contact.html" class="btn-nav-cta">Free IT Assessment</a>
+    </div>
+  </div>
+</nav>
+
+<article class="blog-article">
+  <div class="container-narrow">
+    <a class="blog-back" href="index.html">← All insights</a>
+    <div class="meta">Backup &amp; Recovery · July 23, 2026 · 6 min read</div>
+    <h1>The backup you never tested isn’t a backup</h1>
+    <p class="dek">Almost every business we meet says they “have backups.” Far fewer can tell us the last time someone actually restored from one. During a ransomware event, that gap is the difference between a bad afternoon and a bad quarter.</p>
+
+    <div class="prose">
+      <p>Backups are the one control that turns a catastrophe into an inconvenience — but only if they work when you reach for them. The uncomfortable truth is that a backup you’ve never restored is a <em>hope</em>, not a plan. You don’t find out it was silently failing, missing the right data, or encrypted along with everything else until the worst possible moment.</p>
+
+      <h2>Why “we have backups” fails in practice</h2>
+      <p>The same handful of problems come up again and again after an incident:</p>
+      <ul>
+        <li><strong>The job was failing for weeks.</strong> Nobody was watching the alerts, so the last “good” backup is older than anyone assumed.</li>
+        <li><strong>The backup was on the same network the attacker owned.</strong> Ransomware now hunts for and encrypts backups first. Without an offline or immutable copy, they go down with the ship.</li>
+        <li><strong>It backed up the wrong things.</strong> The file server was covered — but not the line-of-business database, the cloud mailboxes, or the config for that one critical app.</li>
+        <li><strong>Restore takes days, not hours.</strong> The data existed, but nobody measured how long a full recovery actually takes. The business bled while it dragged on.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>SyncIT take:</strong> “Do you have backups?” is the wrong question. The right ones are: <em>When did we last restore from them, how long did it take, and is there a copy attackers can’t reach?</em> If you can’t answer all three, you’re not protected — you’re optimistic.
+      </div>
+
+      <h2>The 3-2-1 rule, and why it still holds</h2>
+      <p>The old standard is still the floor, not the ceiling: <strong>three</strong> copies of your data, on <strong>two</strong> different types of media, with <strong>one</strong> copy offsite. Modern ransomware adds a fourth idea — <strong>immutability</strong>: at least one copy that cannot be altered or deleted, even by an admin account, for a set retention window. That’s what stops an attacker with <a href="mfa-isnt-optional-anymore.html">stolen credentials</a> from wiping your safety net.</p>
+
+      <h2>Know your two numbers: RPO and RTO</h2>
+      <p>Two plain-English targets decide whether a backup strategy fits your business:</p>
+      <ul>
+        <li><strong>RPO (Recovery Point Objective):</strong> how much data can you afford to lose? If you back up nightly, a mid-afternoon attack costs you the whole day’s work.</li>
+        <li><strong>RTO (Recovery Time Objective):</strong> how long can you be down? An hour, a day, a week? The answer should drive how — and where — you back up.</li>
+      </ul>
+      <p>Most owners have never been asked these questions. Answering them turns backups from a checkbox into a decision the business actually made on purpose.</p>
+
+      <h2>What to do this month</h2>
+      <ul>
+        <li><strong>Do a real test restore.</strong> Not “the job says success” — actually recover a file, a mailbox, and a full system, and time it.</li>
+        <li><strong>Confirm one copy is offline or immutable.</strong> If every backup lives on the same network as your servers, fix that first.</li>
+        <li><strong>Verify what’s covered.</strong> Servers, workstations, Microsoft 365 / Google Workspace, databases, and critical app configs — not just the file share.</li>
+        <li><strong>Write down your RPO and RTO.</strong> Then check whether your current setup can actually meet them.</li>
+        <li><strong>Schedule recurring restore drills.</strong> Quarterly is a reasonable start. Backups you test are the only ones you can trust.</li>
+      </ul>
+
+      <h2>Where SyncIT fits</h2>
+      <p>We treat backup and recovery as something we <em>prove</em>, not something we assume. That means monitored backup jobs with real alerting, an immutable/offsite copy ransomware can’t touch, documented RPO/RTO targets, and periodic test restores so recovery is a rehearsed process — not a first-time experiment during a crisis.</p>
+      <p>If you can’t remember the last time anyone restored from your backups, that’s the signal to check now — while it’s a drill and not an emergency.</p>
+    </div>
+
+    <div class="blog-cta">
+      <h3>Want a backup &amp; recovery review?</h3>
+      <p>We’ll confirm what’s actually backed up, whether a copy is safe from ransomware, and how fast you could really recover — for businesses across the NY Tri-State and South Florida.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="../contact.html">Book a free IT assessment</a>
+        <a class="btn btn-ghost" href="tel:+15163081001">Call (516) 308-1001</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">Sync<span>IT</span></div>
+        <p>Practical managed IT &amp; cybersecurity for businesses across the New York Tri-State area and South Florida.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html#managed">Managed IT</a></li>
+          <li><a href="../services.html#security">Cybersecurity</a></li>
+          <li><a href="../services.html#cloud">Cloud &amp; Microsoft 365</a></li>
+          <li><a href="../services.html#backup">Backup &amp; Recovery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="index.html">Insights</a></li>
+          <li><a href="../service-area.html">Service Area</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15163081001">NY · (516) 308-1001</a></li>
+          <li><a href="tel:+19545010072">FL · (954) 501-0072</a></li>
+          <li><a href="mailto:hello@syncitmsp.com">hello@syncitmsp.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> SyncIT MSP. All rights reserved.</span>
+      <span>Managed IT &amp; Cybersecurity · New York Tri-State &amp; South Florida</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js?v=21"></script>
+</body>
+</html>
