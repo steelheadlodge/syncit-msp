@@ -1,4 +1,12 @@
 /* SyncIT Insights / blog */
+
+/* Blog pages reuse body.home (for the shared nav + footer), but the reading
+   surface must be LIGHT — body.home otherwise paints a dark navy background
+   and redefines --home-charcoal to a light color, making dark article text
+   invisible. These overrides (blog.css loads after home.css) restore a clean
+   light content surface only on blog pages. */
+body.home { background: #f8fafc; color: #334155; }
+
 .blog-hero {
   padding: 120px 0 48px;
   background:
@@ -7,7 +15,7 @@
   border-bottom: 1px solid var(--border, #e2e8f0);
 }
 .blog-hero .eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #64748b; margin-bottom: 14px; }
-.blog-hero h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: var(--home-charcoal, #0B1220); line-height: 1.15; margin: 0 0 14px; letter-spacing: -.02em; }
+.blog-hero h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: #0B1220; line-height: 1.15; margin: 0 0 14px; letter-spacing: -.02em; }
 .blog-hero p { font-size: 17px; color: #64748b; max-width: 560px; line-height: 1.6; margin: 0; }
 
 .blog-index { padding: 48px 0 88px; }
@@ -33,6 +41,8 @@
 .blog-article .prose p { margin: 0 0 16px; }
 .blog-article .prose ul { margin: 0 0 18px; padding-left: 1.2em; }
 .blog-article .prose li { margin-bottom: 8px; }
+.blog-article .prose a { color: #1d4ed8; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.blog-article .prose a:hover { color: #1e3a8a; }
 .blog-article .callout {
   margin: 28px 0; padding: 20px 22px; border-radius: 14px;
   background: #f8fafc; border: 1px solid #e2e8f0;
