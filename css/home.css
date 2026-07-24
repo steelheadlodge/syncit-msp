@@ -64,9 +64,9 @@ body.home .nav-logo .brand span {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 10px rgba(34,211,238,.38));
 }
-body.home .nav-logo .tagline { color: var(--home-muted); font-size: 11px; letter-spacing: 1.6px; margin-top: 3px; }
+body.home .nav-logo .tagline { color: #AEBACB; font-weight: 500; font-size: 11px; letter-spacing: 1.6px; margin-top: 3px; }
 @media (max-width: 640px) {
-  body.home .logo-mark { width: 52px; height: 52px; }
+  body.home .logo-mark { width: 48px; height: 48px; }
   body.home .nav-logo .brand { font-size: 27px; }
   body.home .nav-logo { gap: 12px; }
 }
@@ -89,7 +89,7 @@ body.home .nav-links .btn-nav-cta:hover {
 
 /* ── Logo sync animation ("living sync core") ─────────────── */
 body.home .logo-mark {
-  width: 62px; height: 62px;
+  width: 56px; height: 56px;
   overflow: visible;
   /* Crisp dark edge grounds the mark; wide soft blue aura sits behind it
      (kept far out + low-opacity so it never bleeds onto the white). */
