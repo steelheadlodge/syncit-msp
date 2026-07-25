@@ -368,6 +368,12 @@ body.home .hero-proof {
   color: var(--home-ink);
   line-height: 1.5;
 }
+body.home .hero-proof a {
+  color: var(--home-accent-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+body.home .hero-proof a:hover { color: #fff; }
 body.home .hero-trust {
   border-top: none;
   padding-top: 40px;
