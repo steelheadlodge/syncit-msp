@@ -10,7 +10,7 @@ body.home {
   --home-surface-2:#0E1626;  /* inset fields / inner panels */
   --home-charcoal: #F2F5FA;  /* primary text + headings (light) */
   --home-ink:      #C6D0DE;  /* body text */
-  --home-muted:    #A3B0C2;  /* muted / secondary — lifted for easier skim */
+  --home-muted:    #B8C4D4;  /* muted / secondary — bright enough to skim on navy */
   --home-border:   rgba(255, 255, 255, 0.10);
   --home-border-strong: rgba(255, 255, 255, 0.16);
   --home-accent:   #3B82F6;  /* electric blue */
@@ -58,10 +58,10 @@ body.home .navbar.scrolled {
   background: rgba(10,15,26,.94);
   box-shadow: 0 1px 0 var(--home-border), 0 10px 34px rgba(0,0,0,.4);
 }
-body.home .nav-logo { gap: 15px; position: relative; }
+body.home .nav-logo { gap: 16px; position: relative; }
 body.home .nav-logo .brand {
   color: var(--home-charcoal);
-  font-weight: 700; font-size: 31px; letter-spacing: -0.015em;
+  font-weight: 700; font-size: 42px; letter-spacing: -0.02em;
   display: inline-flex; align-items: baseline; line-height: 1;
 }
 body.home .nav-logo .brand span {
@@ -71,11 +71,15 @@ body.home .nav-logo .brand span {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 10px rgba(34,211,238,.38));
 }
-body.home .nav-logo .tagline { color: #AEBACB; font-weight: 500; font-size: 11px; letter-spacing: 1.6px; margin-top: 3px; }
+body.home .nav-logo .tagline {
+  color: #C5D0DE; font-weight: 600; font-size: 14px;
+  letter-spacing: 1.5px; margin-top: 5px;
+}
 @media (max-width: 640px) {
-  body.home .logo-mark { width: 48px; height: 48px; }
-  body.home .nav-logo::after { width: 48px; height: 48px; }
-  body.home .nav-logo .brand { font-size: 27px; }
+  body.home .logo-mark { width: 64px; height: 64px; }
+  body.home .nav-logo::after { width: 64px; height: 64px; }
+  body.home .nav-logo .brand { font-size: 34px; }
+  body.home .nav-logo .tagline { font-size: 12.5px; }
   body.home .nav-logo { gap: 12px; }
 }
 body.home .footer-brand .brand span { margin-left: 0; font-weight: 800; }
@@ -97,7 +101,7 @@ body.home .nav-links .btn-nav-cta:hover {
 
 /* ── Logo sync animation ("living sync core") ─────────────── */
 body.home .logo-mark {
-  width: 56px; height: 56px;
+  width: 76px; height: 76px;
   overflow: visible;
   /* Crisp dark edge grounds the mark; wide soft blue aura sits behind it
      (kept far out + low-opacity so it never bleeds onto the white). */
@@ -119,7 +123,7 @@ body.home .nav-logo::after {
   content: "";
   position: absolute;
   left: 0; top: 50%;
-  width: 56px; height: 56px;
+  width: 76px; height: 76px;
   transform: translateY(-50%);
   pointer-events: none;
   opacity: 0;
@@ -222,6 +226,9 @@ body.home .nav-inner {
   padding-left: var(--home-gutter);
   padding-right: var(--home-gutter);
 }
+/* Taller nav so the larger logo + wordmark don't clip */
+body.home .nav-inner { height: 92px; }
+body.home .navbar.scrolled .nav-inner { height: 80px; }
 body.home .footer-grid,
 body.home .footer-bottom { max-width: none; }
 
@@ -414,7 +421,7 @@ body.home .sync-live-tag {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 11px;
+  font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--home-teal);
@@ -493,11 +500,11 @@ body.home .logostrip {
   border-bottom: 1px solid var(--home-border);
   padding: 28px 0;
 }
-body.home .logostrip .label { color: var(--home-muted); font-size: 11px; letter-spacing: 2.2px; }
+body.home .logostrip .label { color: var(--home-ink); font-size: 14px; letter-spacing: 2px; font-weight: 600; }
 body.home .marquee span {
-  color: #9CA3AF;
+  color: #C5CDD8;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   opacity: 1;
 }
@@ -1018,8 +1025,14 @@ body.home .cta-banner .btn-white:hover {
 body.home .footer {
   background: #111418;
   border-top: 1px solid rgba(255,255,255,.06);
+  font-size: 16px;
 }
+body.home .footer-brand .brand { font-size: 28px; }
 body.home .footer-brand .brand span { color: var(--home-teal); }
+body.home .footer-brand p { font-size: 16px; color: #A8B4C4; line-height: 1.65; }
+body.home .footer h4 { font-size: 14px; }
+body.home .footer ul a { font-size: 16px; color: #A8B4C4; }
+body.home .footer-bottom { font-size: 14.5px; color: #8A97A8; }
 
 /* ── Reveal refinements ───────────────────────────────────── */
 body.home .reveal {
@@ -1345,7 +1358,7 @@ body.home .discovery-card .dc-badge {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 11.5px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--home-teal);
@@ -1699,43 +1712,46 @@ body.home .service-card p { line-height: 1.62; }
 
 /* ══ Readability — LARGE, comfortable type everywhere ══════ */
 body.home { font-size: 20px; }
-body.home .nav-links a { font-size: 18.5px; }
-body.home .nav-links .btn-nav-cta { font-size: 17px; }
-body.home .nav-logo .tagline { font-size: 12.5px; }
+body.home .nav-links a { font-size: 19px; }
+body.home .nav-links .btn-nav-cta { font-size: 17.5px; }
+body.home .nav-logo .tagline { font-size: 15px; }
 
-body.home .hero-eyebrow { font-size: 15.5px; }
-/* Outcome headline — allow wrap; brand flourish stays in .grad-text */
-body.home .hero h1 { font-size: clamp(36px, 4.2vw, 54px); line-height: 1.12; }
-body.home .hero h1 .grad-text { white-space: nowrap; }
-body.home .hero .lead { font-size: clamp(20px, 1.6vw, 24px); line-height: 1.55; }
-body.home .hero-proof { font-size: 16.5px; color: var(--home-ink); }
+body.home .hero-eyebrow { font-size: 16px; }
+/* Brand-first H1 — each phrase on its own line; flat-fee lives in the lead */
+body.home .hero h1 { font-size: clamp(42px, 4.6vw, 60px); line-height: 1.1; }
+body.home .hero h1 .hl,
+body.home .hero h1 .grad-text { display: block; white-space: nowrap; }
+body.home .hero .lead { font-size: clamp(21px, 1.7vw, 25px); line-height: 1.55; }
+body.home .hero-proof { font-size: 18px; color: var(--home-ink); }
 
-body.home .eyebrow { font-size: 13px; letter-spacing: 2.8px; }
-body.home .section-title { font-size: clamp(33px, 3.8vw, 49px); }
-body.home .section-subtitle { font-size: 21px; line-height: 1.6; max-width: 780px; }
+body.home .eyebrow { font-size: 14.5px; letter-spacing: 2.6px; }
+body.home .section-title { font-size: clamp(34px, 3.8vw, 50px); }
+body.home .section-subtitle { font-size: 22px; line-height: 1.6; max-width: 780px; color: var(--home-ink); }
 
-body.home .service-card h3 { font-size: 23px; }
-body.home .service-card p { font-size: 18.5px; line-height: 1.58; }
-body.home .service-card .learn-more { font-size: 16.5px; }
+body.home .service-card h3 { font-size: 24px; }
+body.home .service-card p { font-size: 19px; line-height: 1.58; color: var(--home-ink); }
+body.home .service-card .learn-more { font-size: 17px; }
 
-body.home .why-card h3 { font-size: 21px; }
-body.home .why-card p { font-size: 18.5px; line-height: 1.58; }
+body.home .why-card h3 { font-size: 22px; }
+body.home .why-card p { font-size: 19px; line-height: 1.58; color: var(--home-ink); }
 
 body.home .trust-item strong { font-size: 18.5px; }
 body.home .trust-item,
 body.home .trust-item div { font-size: 16.5px; line-height: 1.4; }
-body.home .hero-stat-label { font-size: 16px; }
+body.home .hero-stat-label { font-size: 17px; color: var(--home-ink); }
 
-body.home .check-list li { font-size: 18.5px; }
+body.home .check-list li { font-size: 19px; }
 
-body.home .quote-card p { font-size: 19.5px; line-height: 1.62; }
-body.home .quote-card .who .nm { font-size: 17.5px; }
-body.home .quote-card .who .rl { font-size: 15.5px; }
+body.home .quote-card p { font-size: 20px; line-height: 1.62; }
+body.home .quote-card .who .nm { font-size: 18px; }
+body.home .quote-card .who .rl { font-size: 16px; }
 
-body.home .discovery-card h3 { font-size: 25px; }
-body.home .discovery-card p { font-size: 17.5px; }
-body.home .dc-field input { font-size: 17.5px; }
-body.home .dc-trust span { font-size: 15px; }
+body.home .discovery-card h3 { font-size: 26px; }
+body.home .discovery-card p { font-size: 18px; }
+body.home .discovery-card .dc-badge { font-size: 14.5px; }
+body.home .dc-field input { font-size: 18px; }
+body.home .dc-trust span { font-size: 15.5px; }
+body.home .btn-lg { font-size: 17.5px; padding: 18px 38px; }
 
 body.home .sync-panel-row .label { font-size: 16.5px; }
 body.home .sync-panel-title { font-size: 16.5px; }
