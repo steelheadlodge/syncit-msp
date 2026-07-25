@@ -10,7 +10,7 @@ body.home {
   --home-surface-2:#0E1626;  /* inset fields / inner panels */
   --home-charcoal: #F2F5FA;  /* primary text + headings (light) */
   --home-ink:      #C6D0DE;  /* body text */
-  --home-muted:    #8B97A8;  /* muted / secondary text */
+  --home-muted:    #A3B0C2;  /* muted / secondary — lifted for easier skim */
   --home-border:   rgba(255, 255, 255, 0.10);
   --home-border-strong: rgba(255, 255, 255, 0.16);
   --home-accent:   #3B82F6;  /* electric blue */
@@ -351,6 +351,16 @@ body.home .hero .lead {
   margin-bottom: 36px;
 }
 body.home .hero-ctas { margin-bottom: 0; gap: 16px; }
+/* Compact proof line — replaces the 4-card trust grid that competed with the form */
+body.home .hero-proof {
+  margin: 22px 0 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--home-ink);
+  line-height: 1.5;
+}
 body.home .hero-trust {
   border-top: none;
   padding-top: 40px;
@@ -370,8 +380,8 @@ body.home .trust-item:hover {
   transform: translateY(-3px);
   box-shadow: var(--home-shadow-lg);
 }
-body.home .trust-item strong { color: var(--home-charcoal); font-size: 13px; }
-body.home .trust-item { color: var(--home-muted); font-size: 12.5px; }
+body.home .trust-item strong { color: var(--home-charcoal); font-size: 14px; }
+body.home .trust-item { color: var(--home-ink); font-size: 14px; }
 body.home .trust-item .ico svg { stroke: var(--home-accent); }
 
 /* Hero visual */
@@ -471,8 +481,8 @@ body.home .hero-stat-val .accent { color: var(--home-accent); }
 body.home .hero-stat-label {
   display: block;
   margin-top: 8px;
-  font-size: 13px;
-  color: var(--home-muted);
+  font-size: 14px;
+  color: var(--home-ink);
   line-height: 1.4;
 }
 
@@ -707,8 +717,8 @@ body.home .service-icon {
 body.home .service-card:hover .service-icon {
   transform: scale(1.08);
 }
-body.home .service-card h3 { font-size: 17px; font-weight: 700; color: var(--home-charcoal); }
-body.home .service-card p { font-size: 14.5px; color: var(--home-muted); }
+body.home .service-card h3 { font-size: 18px; font-weight: 700; color: var(--home-charcoal); }
+body.home .service-card p { font-size: 16.5px; color: var(--home-ink); }
 body.home .service-card .learn-more { color: var(--home-accent); font-weight: 600; transition: gap .2s; }
 
 /* ── SyncIT Switch panel ──────────────────────────────────── */
@@ -1694,11 +1704,11 @@ body.home .nav-links .btn-nav-cta { font-size: 17px; }
 body.home .nav-logo .tagline { font-size: 12.5px; }
 
 body.home .hero-eyebrow { font-size: 15.5px; }
-/* H1 dialed back + each phrase kept on its own single line */
-body.home .hero h1 { font-size: clamp(38px, 4vw, 56px); line-height: 1.12; }
-body.home .hero h1 .hl,
-body.home .hero h1 .grad-text { display: block; white-space: nowrap; }
+/* Outcome headline — allow wrap; brand flourish stays in .grad-text */
+body.home .hero h1 { font-size: clamp(36px, 4.2vw, 54px); line-height: 1.12; }
+body.home .hero h1 .grad-text { white-space: nowrap; }
 body.home .hero .lead { font-size: clamp(20px, 1.6vw, 24px); line-height: 1.55; }
+body.home .hero-proof { font-size: 16.5px; color: var(--home-ink); }
 
 body.home .eyebrow { font-size: 13px; letter-spacing: 2.8px; }
 body.home .section-title { font-size: clamp(33px, 3.8vw, 49px); }
