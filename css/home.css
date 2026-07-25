@@ -215,7 +215,7 @@ body.home .btn-outline:hover {
   background: rgba(59,130,246,.1);
   color: #fff;
 }
-body.home .btn-lg { padding: 17px 36px; font-size: 16px; }
+body.home .btn-lg { padding: 20px 42px; font-size: 20px; }
 
 /* ── Hero ─────────────────────────────────────────────────── */
 /* ── Wide, near-full-bleed layout ────────────────────────── */
@@ -1357,38 +1357,38 @@ body.home .discovery-success { position: relative; z-index: 4; }
 body.home .discovery-card .dc-badge {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  font-size: 14px;
+  gap: 8px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--home-teal);
   background: rgba(34,211,238,.1);
   border: 1px solid rgba(34,211,238,.24);
-  padding: 5px 12px;
+  padding: 8px 16px;
   border-radius: 100px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 body.home .discovery-card .dc-dot {
-  width: 7px; height: 7px;
+  width: 9px; height: 9px;
   border-radius: 50%;
   background: var(--home-teal);
   box-shadow: 0 0 0 0 rgba(34,211,238,.5);
   animation: livePulse 2s ease infinite;
 }
 body.home .discovery-card h3 {
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--home-charcoal);
   letter-spacing: -0.02em;
   line-height: 1.15;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
-body.home .discovery-card p { font-size: 14.5px; color: var(--home-ink); line-height: 1.55; margin-bottom: 16px; }
-body.home .dc-field { margin-bottom: 10px; }
+body.home .discovery-card p { font-size: 19px; color: var(--home-ink); line-height: 1.55; margin-bottom: 20px; }
+body.home .dc-field { margin-bottom: 12px; }
 body.home .dc-field input {
   width: 100%;
-  padding: 13px 15px;
-  font-size: 15px;
+  padding: 16px 18px;
+  font-size: 18px;
   font-family: inherit;
   color: var(--home-charcoal);
   background: var(--home-surface-2);
@@ -1397,13 +1397,14 @@ body.home .dc-field input {
   outline: none;
   transition: border-color .2s, box-shadow .2s, background .2s;
 }
-body.home .dc-field input::placeholder { color: #6B7688; }
+body.home .dc-field input::placeholder { color: #8A96A8; }
 body.home .dc-field input:focus { border-color: var(--home-accent); background: #0B1322; box-shadow: 0 0 0 3px rgba(59,130,246,.2); }
 body.home .discovery-card > .btn {
   width: 100%;
-  margin-top: 4px;
-  padding: 14px;
-  font-size: 15.5px;
+  margin-top: 6px;
+  padding: 18px 20px;
+  font-size: 20px;
+  font-weight: 700;
   background: linear-gradient(120deg, var(--home-accent), #2563EB);
   box-shadow: 0 8px 24px rgba(59,130,246,.36);
 }
@@ -1412,9 +1413,9 @@ body.home .discovery-card > .btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 12px 32px rgba(59,130,246,.46);
 }
-body.home .dc-trust { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center; margin-top: 14px; }
-body.home .dc-trust span { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: var(--home-muted); }
-body.home .dc-trust svg { stroke: var(--home-teal); }
+body.home .dc-trust { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; margin-top: 16px; }
+body.home .dc-trust span { display: inline-flex; align-items: center; gap: 6px; font-size: 15.5px; font-weight: 600; color: var(--home-ink); }
+body.home .dc-trust svg { width: 16px; height: 16px; stroke: var(--home-teal); }
 body.home .discovery-success {
   background: transparent;
   padding: 32px 26px 34px;
@@ -1713,7 +1714,7 @@ body.home .service-card p { line-height: 1.62; }
 /* ══ Readability — LARGE, comfortable type everywhere ══════ */
 body.home { font-size: 20px; }
 body.home .nav-links a { font-size: 19px; }
-body.home .nav-links .btn-nav-cta { font-size: 17.5px; }
+body.home .nav-links .btn-nav-cta { font-size: 18px; padding: 12px 26px !important; }
 body.home .nav-logo .tagline { font-size: 15px; }
 
 body.home .hero-eyebrow { font-size: 16px; }
@@ -1723,6 +1724,23 @@ body.home .hero h1 .hl,
 body.home .hero h1 .grad-text { display: block; white-space: nowrap; }
 body.home .hero .lead { font-size: clamp(21px, 1.7vw, 25px); line-height: 1.55; }
 body.home .hero-proof { font-size: 18px; color: var(--home-ink); }
+
+/* Booking CTAs — must win over earlier .discovery-card > .btn (15.5px) */
+body.home .hero-ctas .btn-lg,
+body.home .btn-lg {
+  font-size: 21px;
+  padding: 20px 44px;
+  letter-spacing: -0.01em;
+}
+body.home .discovery-card > .btn {
+  font-size: 21px;
+  padding: 20px 22px;
+}
+body.home .discovery-card .dc-badge { font-size: 17.5px; padding: 9px 18px; }
+body.home .discovery-card h3 { font-size: 32px; }
+body.home .discovery-card p { font-size: 19.5px; }
+body.home .dc-field input { font-size: 19px; padding: 17px 18px; }
+body.home .dc-trust span { font-size: 16.5px; }
 
 body.home .eyebrow { font-size: 14.5px; letter-spacing: 2.6px; }
 body.home .section-title { font-size: clamp(34px, 3.8vw, 50px); }
@@ -1745,13 +1763,6 @@ body.home .check-list li { font-size: 19px; }
 body.home .quote-card p { font-size: 20px; line-height: 1.62; }
 body.home .quote-card .who .nm { font-size: 18px; }
 body.home .quote-card .who .rl { font-size: 16px; }
-
-body.home .discovery-card h3 { font-size: 26px; }
-body.home .discovery-card p { font-size: 18px; }
-body.home .discovery-card .dc-badge { font-size: 14.5px; }
-body.home .dc-field input { font-size: 18px; }
-body.home .dc-trust span { font-size: 15.5px; }
-body.home .btn-lg { font-size: 17.5px; padding: 18px 38px; }
 
 body.home .sync-panel-row .label { font-size: 16.5px; }
 body.home .sync-panel-title { font-size: 16.5px; }
@@ -1953,6 +1964,9 @@ body.home .nav-call:active { background: rgba(59,130,246,.3); }
     justify-content: center; text-align: center;
     font-size: 12px; letter-spacing: .8px; padding: 8px 16px; line-height: 1.4;
   }
-  /* Strategy Call heading: fit cleanly on all phones (wraps as "Book a 30-Minute" / "Strategy Call") */
-  body.home .discovery-card h3 { font-size: 21px; line-height: 1.2; letter-spacing: -0.01em; }
+  /* Strategy Call heading: fit cleanly on phones, still large */
+  body.home .discovery-card h3 { font-size: 26px; line-height: 1.2; letter-spacing: -0.01em; }
+  body.home .discovery-card .dc-badge { font-size: 15.5px; }
+  body.home .discovery-card > .btn,
+  body.home .hero-ctas .btn-lg { font-size: 18.5px; padding: 17px 22px; }
 }
